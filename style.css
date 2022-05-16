@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+
+	background-color: rgb(108, 5, 27);
+	/* mam zamiar zrobić zmienne w CSS dla kolorów */
+}
+
+header {
+	padding: 50px 0;
+	text-align: center;
+}
+
+h1 {
+	padding: 10px;
+	color: rgb(176, 72, 4);
+
+}
+
+
+header h2 {
+	margin: 20px;
+	color: rgb(247, 154, 154);
+	text-align: center;
+}
+
+main {
+	position: relative;
+}
+
+article {
+	margin: 20px 20px;
+	line-height: 50px;
+	max-width: 45%;
+
+}
+
+article h2 {
+	color: rgb(249, 192, 192);
+}
+
+article h3 {
+	color: rgb(235, 235, 235);
+}
+
+article.allTask {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+article.completedTasks {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+button {
+	padding: 3px 6px;
+	margin: 0 20px;
+	background-color: rgb(236, 21, 21);
+	border-radius: 20px;
+	transition: .3s;
+}
+
+button:hover {
+	background-color: black;
+	color: rgb(236, 21, 21);
+}
+
+input {
+	background-color: rgb(48, 3, 3);
+	color: rgb(236, 21, 21);
+}
+
+input:content {
+	border: 5px solid black;
+}
