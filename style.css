@@ -5,8 +5,9 @@
 }
 
 body {
+	background-color: rgb(124, 5, 31);
 
-	background-color: rgb(108, 5, 27);
+	/* background-color: rgb(108, 5, 27); */
 	/* mam zamiar zrobić zmienne w CSS dla kolorów */
 }
 
@@ -34,12 +35,20 @@ main {
 
 article {
 	margin: 20px 20px;
-	line-height: 50px;
+	padding: 0 30px;
+	line-height: 35px;
 	max-width: 45%;
 
 }
 
+article ul {
+	list-style: square;
+	font-size: 20px;
+
+}
+
 article h2 {
+	margin: 20px 0;
 	color: rgb(249, 192, 192);
 }
 
@@ -75,8 +84,4 @@ button:hover {
 input {
 	background-color: rgb(48, 3, 3);
 	color: rgb(236, 21, 21);
-}
-
-input:content {
-	border: 5px solid black;
 }
