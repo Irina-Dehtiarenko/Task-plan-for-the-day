@@ -5,6 +5,8 @@
 }
 
 body {
+	font-style: italic;
+	letter-spacing: 2px;
 	background-color: rgb(124, 5, 31);
 
 	/* background-color: rgb(108, 5, 27); */
@@ -34,16 +36,20 @@ main {
 }
 
 article {
+	max-width: 45%;
 	margin: 20px 20px;
 	padding: 0 30px;
+
 	line-height: 35px;
-	max-width: 45%;
 
 }
 
 article ul {
 	list-style: square;
-	font-size: 20px;
+	font-size: 35px;
+	color: rgba(34, 7, 7, 0.696);
+	font-family: 'Smooch', cursive;
+	word-spacing: 20px;
 
 }
 
@@ -71,17 +77,18 @@ article.completedTasks {
 button {
 	padding: 3px 6px;
 	margin: 0 20px;
-	background-color: rgb(236, 21, 21);
+	color: rgb(40, 3, 11);
+	background-color: rgb(176, 72, 4);
+	font-style: italic;
 	border-radius: 20px;
 	transition: .3s;
 }
 
-button:hover {
-	background-color: black;
-	color: rgb(236, 21, 21);
-}
 
-input {
-	background-color: rgb(48, 3, 3);
+
+input,
+button:hover {
+	font-style: italic;
 	color: rgb(236, 21, 21);
+	background-color: rgb(40, 3, 11);
 }

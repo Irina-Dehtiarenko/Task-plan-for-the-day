@@ -9,18 +9,25 @@ const completedTasksNumbers = document.querySelector('span.completedTasksNumbers
 let allNumbers = 0;
 let numbersCompleted = 0;
 
+
 const tasksIsCompleted = e => {
-	/* Mam fajny pomysł, ale nie wiem ja go zrealizować, muszę się położyć i przemyślić to. Chcę, żeby wykonane zadania się nie usuwały, a tylko wskakiwały do kolumny obok, z płynną zmianą ilości wykonanych zadań */
+
+	const tasks = [...document.querySelectorAll('.task')]
+
 	const completedTask = e.target.parentNode
 	completedTask.className = 'taskCompleted'
-	console.log(completedTask);
+	let tbnCompleted = completedTask.querySelector('button')
+
+	e.target.parentNode.remove()
+	tbnCompleted.remove()
+	completedTasks.appendChild(completedTask)
+
+	exercise.textContent = tasks.length - 1
 	numbersCompleted++
 	completedTasksNumbers.textContent = numbersCompleted
-	e.target.parentNode.remove()
-	exercise.textContent = document.querySelectorAll('.taskCompleted').length
-	console.log(document.querySelectorAll('.taskCompleted'));
 
 }
+
 
 const createdTasks = e => {
 	e.preventDefault();
@@ -38,15 +45,17 @@ const createdTasks = e => {
 
 	input.value = "";
 
-	exercise.textContent = document.querySelectorAll('.task').length
-
 	allNumbers++
 	allTaskNumbers.textContent = allNumbers;
-	exercise.textContent = allNumbers;
 
+	const tasks = [...document.querySelectorAll('.task')]
 
-	task.querySelector('button').addEventListener('click', tasksIsCompleted);
+	exercise.textContent = tasks.length
+
+	task.querySelector('button').addEventListener('click', tasksIsCompleted)
 
 }
 
 form.addEventListener('submit', createdTasks)
+
+
